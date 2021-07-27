@@ -57,6 +57,24 @@ body {
     margin-left: 1%;
     
 }
+
+#weatherCard {
+    display: flex;
+    justify-content: row;
+    align-content: center;
+
+}
 .fancy{
+    display: block;
     color: white;
+    justify-content: column;
+    background-color: darkgrey;
+    width: 250px;
+    height: 450px;
+
+
+}
+.fancySmol {
+    display: flex;
+
 }
