@@ -11,9 +11,10 @@ function buildWeatherResults(data) {
 
 for(i = 0; i < data.list.length; i++) {
     var forecast = data.list[i];
+    var farenheit = Math.round(((forecast.main.temp-273.15)*1.8)+32);
 if (i % 8 == 3 ){ 
     
-    console.log(forecast.dt_txt, forecast.main.temp, forecast.weather[0].description)
+    console.log(forecast.dt_txt, farenheit, forecast.weather[0].description)
 }
 //main.temp + main.weather[0].descrition;
 
