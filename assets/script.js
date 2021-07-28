@@ -23,10 +23,53 @@ if (i % 8 == 3 ){
 
 
         }
+        if (forecast.weather[0].description == "broken clouds") {
+            var brokenClouds = $("<img src='./assets/images/brokenClouds.png'>");
+            brokenClouds.attr("width","124");
+            brokenClouds.attr("height","124");
+            brokenClouds.appendTo('.fancy');
+            
+        }
+        else if (forecast.weather[0].description == "clear sky") {
+            var clearSky = $("<img src='./assets/images/clearSky.png'>")
+            clearSky.attr("width","124");
+            clearSky.attr("height","124");
+            clearSky.appendTo('.fancy');
+        
+        }
+        else if (forecast.weather[0].description == "scattered clouds") {
+            var scatteredClouds = $("<img src='./assets/images/scattered.png'>")
+            scatteredClouds.attr("width","124");
+            scatteredClouds.attr("height","124");
+            scatteredClouds.appendTo('.fancy');
+        }
+        else if (forecast.weather[0].description == "light rain") {
+            var lightRain = $("<img src='./assets/images/lightRain.png'>")
+            lightRain.attr("width","124");
+            lightRain.attr("height","124");
+            lightRain.appendTo('.fancy');            
+        }
+        else if (forecast.weather[0].description == "overcast") {
+            var overcast = $("<img src='./assets/images/overcast.png'>")
+            overcast.attr("width","124");
+            overcast.attr("height","124");
+            overcast.appendTo('.fancy'); 
+        }
+        else if (forecast.weather[0].description == "severe storms") {
+            var severeStorms = $("<img src='./assets/images/severStorm.png'>")
+            severeStorms.attr("width","124");
+            severeStorms.attr("height","124");
+            severeStorms.appendTo('.fancy');    
+        }
+        else if (forecast.weather[0].description == "storms") {
+            var storms = $("<img src='./assets/images/overcast.png'>")
+            storms.attr("width","124");
+            storms.attr("height","124");
+            storms.appendTo('.fancy'); 
+        }
     }
-    if (forecast.weather[0].description == "broken clouds") {
-        $("<img src='./assets/images/brokenClouds.png'>").appendTo('.fancy');
-}
+   
+
 
 temp.text(farenheit);
 temp.addClass('fancySmol')
