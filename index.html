@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel ="icon" href="assets/images/weather_icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/style.css">
     <title>Weather Home</title>
 </head>
@@ -18,16 +19,17 @@
         <div id="menu">
         </div>
     </header>
-    <article>
+    <article class="container-fluid">
         <div>
-            <div>
-                <div id="searchHeader">
+            <div class="row search-container">
+                <div id="searchHeader" class ="col-lg-3 bg-light pt-3 pb-3">
                     <form id="search-form" class="card-body">
                         <input name="searchBar" id="searchBar" type="text" autofocus="true" class="form-input" placeholder="Search for a city!"/>
                         <button type="submit" class="btn">Get Weather</button>
                     </form>
                 </div>
-                <div class="weatherCard">
+                <div class="weatherCard mt-4 col-md-12">
+                    
 
 
 
@@ -38,5 +40,6 @@
     <div></div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="./assets/script.js"></script>
 </html>
