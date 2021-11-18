@@ -9,25 +9,38 @@ function buildWeatherResults(data) {
   var farenheit = "";
   for (i = 0; i < data.list.length; i++) {
     var forecast = data.list[i];
+    var forecast = data.list[i];
+    var farenheit = Math.round((forecast.main.temp - 273.15) * 1.8 + 32);
+
+    if (i % 8 == 3) {
+      console.log(forecast.dt_txt, farenheit, forecast.weather[0].description);
+      createCard(forecast.dt_txt, farenheit, forecast.weather[0].description);
+    }
+      
+    
+  }
     //var farenheit replaces line 12 (data.main.temp), uses Farenheit instead of Kelvin
-    farenheit = Math.round((forecast.main.temp - 273.15) * 1.8 + 32);
+    
+    
     //
     console.log("list item" + i + "is" + farenheit);
     //Sets the interval to once a day, by going every 24 hours, based on the 3 hour interval given by API
-    if (i % 8 == 3) {
-      console.log(forecast.dt_txt, farenheit, forecast.weather[0].description);
-      //main.temp + main.weather[0].descrition;
+   
+
+      function createCard() {
       var header = $("<h1>");
       header.text(data.city.name);
       header.addClass("fancy");
       var temp = $("<div>");
       $(".weatherCard").append(header);
-      temp.text(farenheit[i % 8 == 3]);
+      temp.text(farenheit);
       temp.addClass("fancySmol");
       $(".fancy").append(temp);
-    }
-  }
+      iconSelector;
+     }
+  
   //loop ends
+  function iconSelector() {
   if (forecast.weather[0].description == "broken clouds") {
     var brokenClouds = $("<img src='./assets/images/brokenClouds.png'>");
     brokenClouds.attr("width", "124");
@@ -64,8 +77,14 @@ function buildWeatherResults(data) {
     storms.attr("height", "124");
     storms.appendTo(".fancy");
   }
+  else if (forecast.weather[0].description == "snow") {
+    var snow = $("<img src='./assets/images/snow.png'>");
+    snow.attr("width", "124");
+    snow.attr("height", "124");
+    snow.appendTo(".fancy");
 }
-
+  }
+}
 $("#search-form").on("submit", function (e) {
   e.preventDefault();
   var city = $("#searchBar").val();
@@ -92,6 +111,6 @@ $("#search-form").on("submit", function (e) {
   localStorage.getItem(buildWeatherResults);
   localStorage.setItem(cityListEl, buildWeatherResults);
 
-  cityButton.text = $("#searchBar").val();
+  // cityButton.text = $("#searchBar").val();
   $("searchResults").append.cityButton;
-});
+})
