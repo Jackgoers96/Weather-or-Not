@@ -18,6 +18,11 @@ header {
     margin-top: -1%;
     margin-right: -1%;
 }
+.super {
+    background-color: aliceblue;
+    font-size: x-large;
+    color: black;
+}
 #home {
     display:flex;
     background-color: inherit;
