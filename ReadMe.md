@@ -2,7 +2,7 @@
 
 # Weather-or-Not
 
-> Live demo [_here_]https://jackgoers96.github.io/Weather-or-Not/
+> Live demo [_here_](https://jackgoers96.github.io/Weather-or-Not/)
 
 ## Table of Contents
 
